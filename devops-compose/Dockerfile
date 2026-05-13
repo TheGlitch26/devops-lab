@@ -6,10 +6,12 @@ RUN mvn dependency:resolve
 COPY src ./src
 RUN mvn clean package -DskipTests
 
+# Force a known jar name
+RUN cp target/*.jar app.jar
 
 # Stage 2: Runtime
 FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY --from=build /app/target/devops-app-*.jar app.jar
+COPY --from=build /app/app.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
