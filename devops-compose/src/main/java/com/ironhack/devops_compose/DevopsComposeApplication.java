@@ -8,6 +8,7 @@ public class DevopsComposeApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DevopsComposeApplication.class, args);
+		System.out.println("Application runs successfully!");
 	}
 
 }

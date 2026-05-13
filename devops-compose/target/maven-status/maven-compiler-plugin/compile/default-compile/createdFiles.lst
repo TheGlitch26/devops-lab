@@ -1,0 +1,4 @@
+com\ironhack\devops_compose\DevopsComposeApplication.class
+com\ironhack\devops_compose\UserRepository.class
+com\ironhack\devops_compose\Controller.class
+com\ironhack\devops_compose\User.class
